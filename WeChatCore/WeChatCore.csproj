@@ -1,0 +1,161 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{588E8149-F7FC-4304-87E1-43426D41AAC4}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WeChatCore</RootNamespace>
+    <AssemblyName>WeChatCore</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>wechat.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CommonTools, Version=1.0.0.3, Culture=neutral, PublicKeyToken=c81093cf33f6c5e1, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Referce\CommonTools.dll</HintPath>
+    </Reference>
+    <Reference Include="HttpHelper, Version=1.0.0.0, Culture=neutral, PublicKeyToken=c81093cf33f6c5e1, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Referce\HttpHelper.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>packages\Newtonsoft.Json.9.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Class1.cs" />
+    <Compile Include="Common\CommonMethodCallBackHandlers.cs" />
+    <Compile Include="Common\MethodsHelper.cs" />
+    <Compile Include="Common\NotifyPropertyChanged.cs" />
+    <Compile Include="Control\ImgeDefine.cs" />
+    <Compile Include="DefineClass\CommonDefine.cs" />
+    <Compile Include="DefineClass\ConfigDefine.cs" />
+    <Compile Include="DefineClass\DirectoryDefine.cs" />
+    <Compile Include="DefineClass\LogPathDefine.cs" />
+    <Compile Include="DefineClass\UrlDefine.cs" />
+    <Compile Include="Entity\AddMsgListItemEntity.cs" />
+    <Compile Include="Entity\AppInfoEntity.cs" />
+    <Compile Include="Entity\AutoRepateEntity.cs" />
+    <Compile Include="Entity\BaseContactEntity.cs" />
+    <Compile Include="Entity\BaseRequestEntity.cs" />
+    <Compile Include="Entity\BaseResponseEntity.cs" />
+    <Compile Include="Entity\BindEmailEntity.cs" />
+    <Compile Include="Entity\BindMobileEntity.cs" />
+    <Compile Include="Entity\ContactListItemEntity.cs" />
+    <Compile Include="Entity\ContactsListEntity.cs" />
+    <Compile Include="Entity\FileEntity.cs" />
+    <Compile Include="Entity\GetMsgEntiy.cs" />
+    <Compile Include="Entity\GroupContacts.cs" />
+    <Compile Include="Entity\GroupMemberEntity.cs" />
+    <Compile Include="Entity\GroupMemberListEntity.cs" />
+    <Compile Include="Entity\ListItemEntity.cs" />
+    <Compile Include="Entity\LoginResultEntity.cs" />
+    <Compile Include="Entity\MemberListItemEntity.cs" />
+    <Compile Include="Entity\MPArticleListItemEntity.cs" />
+    <Compile Include="Entity\MPSubscribeMsgListItemEntity.cs" />
+    <Compile Include="Entity\MsgEntity.cs" />
+    <Compile Include="Entity\NickNameEntity.cs" />
+    <Compile Include="Entity\NotifyPhoneEntity.cs" />
+    <Compile Include="Entity\ProfileEntity.cs" />
+    <Compile Include="Entity\ReceiveMsgEntity.cs" />
+    <Compile Include="Entity\RecommendInfoEntity.cs" />
+    <Compile Include="Entity\SendFileResultEntity.cs" />
+    <Compile Include="Entity\SendMsgBodyEntity.cs" />
+    <Compile Include="Entity\SendMsgEntity.cs" />
+    <Compile Include="Entity\SendMsgResultEntity.cs" />
+    <Compile Include="Entity\SyncKeyEntity.cs" />
+    <Compile Include="Entity\UserEntity.cs" />
+    <Compile Include="Entity\UserNameEntity.cs" />
+    <Compile Include="Enum\AutoRepateEnum.cs" />
+    <Compile Include="Enum\ContactType.cs" />
+    <Compile Include="Enum\FileTypeEumn.cs" />
+    <Compile Include="Enum\MediaTypeEnum.cs" />
+    <Compile Include="Enum\MsgOwerTypeEnum.cs" />
+    <Compile Include="Enum\MsgTypeEnum.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="WeChat.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Referce\Newtonsoft.Json.dll" />
+    <Content Include="Referce\Newtonsoft.Json.xml" />
+    <Content Include="Referce\x86\CommonTools.dll" />
+    <Content Include="Referce\x86\HttpHelper.dll" />
+    <Content Include="Referce\x86\ICSharpCode.SharpZipLib.dll" />
+    <Resource Include="Resource\DefultHeader.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Data\data.dat">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="packages.config" />
+    <None Include="wechat.snk" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
